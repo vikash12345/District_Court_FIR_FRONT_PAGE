@@ -27,14 +27,14 @@ for($PageLoop = 1; $PageLoop < 2; $PageLoop++)
 					$courtname	=	$element->find('./td[2]', 0)->plaintext;
 					$casenumbr	=	$element->find('./td[3]', 0)->plaintext;
 					$casestats	=	$element->find('./td[4]', 0)->plaintext;
-					$casevalue	=	$element->find('./td[5]/button', 0)->plaintext;
+					$casevalue	=	$element->find('./td[5]/button', 0);
 					$caselinkR	=	$BaseLink . $CaseValue->attr['value'];
 					$caselink	=	str_replace("amp;", "", $CaseLinkR)->plaintext;
 				scraperwiki::save_sqlite(array('num'), array('num' => $no,
 											     				 'courtname' => $courtname,
 															 'casenumbr' => $casenumbr,
 															 'casestats' => $casestats, 
-															 'caselink' => $caselink, 
+												'caselink' => $caselink
 														 ));	
 					
 					
