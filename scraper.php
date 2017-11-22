@@ -8,7 +8,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 	$text = str_replace(',', '', $numberforloop);
 	$loop = $text/20;
 	
-for($PageLoop = 1; $PageLoop < 2; $PageLoop++)
+for($PageLoop = 1; $PageLoop < 5; $PageLoop++)
 	{
 		
 		$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyfir&page='.$PageLoop;
@@ -30,7 +30,7 @@ for($PageLoop = 1; $PageLoop < 2; $PageLoop++)
 					$casevalue	=	$element->find('./td[5]/button', 0);
 					$caselinkR	=	$BaseLink . $casevalue->attr['value'];
 					$caselink	=	str_replace("amp;", "", $caselinkR);
-					echo "$caselink\n";
+					echo "$FinalURL\n";
 scraperwiki::save_sqlite(array('num'), array('num' => $no,
  'courtname' => $courtname,
 'casenumbr' => $casenumbr,
