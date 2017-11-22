@@ -13,6 +13,7 @@ for($PageLoop = 1; $PageLoop < 5; $PageLoop++)
 		
 		$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyfir&page='.$PageLoop;
 		$Html		=	file_get_html($FinalURL);
+		echo "$FinalURL\n";
 		sleep(10);
 		$RowNumb	=	-1;
 		if ($Html) 
@@ -30,7 +31,7 @@ for($PageLoop = 1; $PageLoop < 5; $PageLoop++)
 					$casevalue	=	$element->find('./td[5]/button', 0);
 					$caselinkR	=	$BaseLink . $casevalue->attr['value'];
 					$caselink	=	str_replace("amp;", "", $caselinkR);
-					echo "$FinalURL\n";
+					
 scraperwiki::save_sqlite(array('num'), array('num' => $no,
  'courtname' => $courtname,
 'casenumbr' => $casenumbr,
