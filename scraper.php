@@ -30,7 +30,7 @@ for($PageLoop = 1; $PageLoop < 2; $PageLoop++)
 					$casevalue	=	$element->find('./td[5]/button', 0)->plaintext;
 					$caselinkR	=	$BaseLink . $CaseValue->attr['value'];
 					$caselink	=	str_replace("amp;", "", $CaseLinkR);
-					echo "$caselinkR\n";
+					echo "$casevalue\n";
 scraperwiki::save_sqlite(array('num'), array('num' => $no,
  'courtname' => $courtname,
 'casenumbr' => $casenumbr,
