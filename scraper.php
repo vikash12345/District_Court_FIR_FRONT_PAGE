@@ -7,8 +7,8 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 	$numberforloop = $Pagination->find("//*[@id='w0']/div/b[2]",0)->plaintext;
 	$text = str_replace(',', '', $numberforloop);
 	$loop = $text/20;
-	//$loop
-for($PageLoop = 1; $PageLoop < 2; $PageLoop++)
+	
+for($PageLoop = 1; $PageLoop < $loop; $PageLoop++)
 	{
 		
 		$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyfir&page='.$PageLoop;
