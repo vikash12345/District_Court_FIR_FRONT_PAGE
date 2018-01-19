@@ -7,7 +7,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 	$numberforloop = $Pagination->find("//*[@id='w0']/div/b[2]",0)->plaintext;
 	$text = str_replace(',', '', $numberforloop);
 	$loop = $text/20;
-	$loop
+	//$loop
 for($PageLoop = 1; $PageLoop < 2; $PageLoop++)
 	{
 		
