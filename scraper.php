@@ -8,7 +8,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 	$text = str_replace(',', '', $numberforloop);
 	$loop = $text/20;
 	
-for($PageLoop = 25704; $PageLoop < $loop; $PageLoop++)
+for($PageLoop = 26392; $PageLoop < $loop; $PageLoop++)
 	{
 		
 		$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyfir&page='.$PageLoop;
